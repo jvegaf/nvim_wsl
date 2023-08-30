@@ -134,6 +134,16 @@ return require('packer').startup {
       end
     }
 
+    use {
+      "ahmedkhalf/project.nvim",
+      requires = "nvim-telescope/telescope.nvim",
+      config = function()
+        require("project_nvim").setup {
+          require('telescope').load_extension('projects')
+        }
+      end
+    }
+
     use 'windwp/nvim-spectre'
 
     use { 'normen/vim-pio' }

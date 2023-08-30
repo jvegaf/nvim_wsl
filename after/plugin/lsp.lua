@@ -67,7 +67,7 @@ lsp.format_mapping('gq', {
   }
 })
 
-lsp.skip_server_setup({ 'tsserver' })
+-- lsp.skip_server_setup({ 'tsserver' })
 
 lsp.setup()
 
