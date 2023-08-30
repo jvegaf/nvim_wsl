@@ -71,16 +71,16 @@ map('n', '<F8>', '<cmd>TSPlaygroundToggle<cr>', opts)
 -- map('n', '<C-t>', '<cmd>lua vim.lsp.buf.document_symbol()<cr>', opts)
 
 
-vim.keymap.set(
-  "n",
-  "<tab>",
-  "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>",
-  opts
-)
+-- vim.keymap.set(
+--   "n",
+--   "<tab>",
+--   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>",
+--   opts
+-- )
 
 -- Tabs
--- map('n', '<Tab>', '<cmd>BufferNext<CR>', opts)
--- map('n', '<S-Tab>', '<cmd>BufferPrevious<CR>', opts)
+map('n', '<Tab>', '<cmd>BufferLineCycleNext<CR>', opts)
+map('n', '<S-Tab>', '<cmd>BufferLineCyclePrevious<CR>', opts)
 map('n', '<A-q>', '<cmd>bdelete<CR>', opts)
 map('n', '<leader>w', '<cmd>write<CR>', opts)
 map('n', '<leader>q', '<cmd>quit<CR>', opts)
