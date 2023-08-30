@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/home/jevf/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -155,10 +160,21 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["mini.surround"] = {
-    config = { "\27LJ\2\n­\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\0\1\0\a\14highlight\bgsh\freplace\bgsr\vdelete\bgsd\19update_n_lines\bgsn\badd\bgsa\tfind\bgsf\14find_left\bgsF\nsetup\18mini.surround\frequire\0" },
+    config = { "\27LJ\2\n­\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\0\1\0\a\freplace\bgsr\19update_n_lines\bgsn\14find_left\bgsF\14highlight\bgsh\vdelete\bgsd\tfind\bgsf\badd\bgsa\nsetup\18mini.surround\frequire\0" },
     loaded = true,
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/mini.surround",
     url = "https://github.com/echasnovski/mini.surround"
+  },
+  neotest = {
+    config = { "\27LJ\2\n[\0\0\5\0\a\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\2\0006\2\3\0009\2\4\0029\2\5\2'\4\6\0B\2\2\0A\0\0\1K\0\1\0\6%\vexpand\afn\bvim\brun\fneotest\frequireT\0\0\4\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\2\0006\2\3\0009\2\4\0029\2\5\2B\2\1\0A\0\0\1K\0\1\0\bcwd\tloop\bvim\brun\fneotest\frequire7\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\2\0B\0\1\1K\0\1\0\brun\fneotest\frequireB\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0B\0\1\1K\0\1\0\vtoggle\fsummary\fneotest\frequireY\0\0\3\0\5\0\b6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0005\2\4\0B\0\2\1K\0\1\0\1\0\2\15auto_close\2\nenter\2\topen\voutput\fneotest\frequireG\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0B\0\1\1K\0\1\0\vtoggle\17output_panel\fneotest\frequireù\4\1\0\a\0\28\1=6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0?\4\0\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0003\4\v\0005\5\f\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\r\0003\4\14\0005\5\15\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\16\0003\4\17\0005\5\18\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\19\0003\4\20\0005\5\21\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\22\0003\4\23\0005\5\24\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\25\0003\4\26\0005\5\27\0B\0\5\1K\0\1\0\1\0\3\tdesc\24Toggle Output Panel\vsilent\2\fnoremap\2\0\16<leader>too\1\0\3\tdesc\16Show Output\vsilent\2\fnoremap\2\0\15<leader>to\1\0\3\tdesc\19Toggle Summary\vsilent\2\fnoremap\2\0\15<leader>ts\1\0\3\tdesc\16Run Nearest\vsilent\2\fnoremap\2\0\15<leader>tr\1\0\3\tdesc\23Run All Test Files\vsilent\2\fnoremap\2\0\15<leader>tT\1\0\3\tdesc\rRun File\vsilent\2\fnoremap\2\0\15<leader>tt\6n\bset\vkeymap\bvim\radapters\1\0\0\19neotest-vitest\nsetup\fneotest\frequire\3€€À™\4\0" },
+    loaded = true,
+    path = "/home/jevf/.local/share/nvim/site/pack/packer/start/neotest",
+    url = "https://github.com/nvim-neotest/neotest"
+  },
+  ["neotest-vitest"] = {
+    loaded = true,
+    path = "/home/jevf/.local/share/nvim/site/pack/packer/start/neotest-vitest",
+    url = "https://github.com/marilari88/neotest-vitest"
   },
   ["neovim-session-manager"] = {
     loaded = true,
@@ -298,7 +314,7 @@ _G.packer_plugins = {
     url = "https://github.com/moll/vim-bbye"
   },
   ["vim-browser-search"] = {
-    config = { "\27LJ\2\nw\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\28:'<,'>BrowserSearch<CR>\n<A-s>\6v\20nvim_set_keymap\bapi\bvim\0" },
+    config = { "\27LJ\2\nw\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\28:'<,'>BrowserSearch<CR>\n<A-s>\6v\20nvim_set_keymap\bapi\bvim\0" },
     loaded = true,
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/vim-browser-search",
     url = "https://github.com/voldikss/vim-browser-search"
@@ -334,47 +350,51 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: vim-visual-multi
-time([[Config for vim-visual-multi]], true)
-try_loadstring("\27LJ\2\n-\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\6;\14VM_leader\6g\bvim\0", "config", "vim-visual-multi")
-time([[Config for vim-visual-multi]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Config for: treesj
-time([[Config for treesj]], true)
-try_loadstring("\27LJ\2\n»\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\23<cmd>TSJToggle<cr>\14<leader>m\6n\20nvim_set_keymap\bapi\bvim\1\0\1\24use_default_keymaps\1\nsetup\vtreesj\frequire\0", "config", "treesj")
-time([[Config for treesj]], false)
+-- Config for: neotest
+time([[Config for neotest]], true)
+try_loadstring("\27LJ\2\n[\0\0\5\0\a\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\2\0006\2\3\0009\2\4\0029\2\5\2'\4\6\0B\2\2\0A\0\0\1K\0\1\0\6%\vexpand\afn\bvim\brun\fneotest\frequireT\0\0\4\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\2\0006\2\3\0009\2\4\0029\2\5\2B\2\1\0A\0\0\1K\0\1\0\bcwd\tloop\bvim\brun\fneotest\frequire7\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\2\0B\0\1\1K\0\1\0\brun\fneotest\frequireB\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0B\0\1\1K\0\1\0\vtoggle\fsummary\fneotest\frequireY\0\0\3\0\5\0\b6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0005\2\4\0B\0\2\1K\0\1\0\1\0\2\15auto_close\2\nenter\2\topen\voutput\fneotest\frequireG\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0B\0\1\1K\0\1\0\vtoggle\17output_panel\fneotest\frequireù\4\1\0\a\0\28\1=6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0?\4\0\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\n\0003\4\v\0005\5\f\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\r\0003\4\14\0005\5\15\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\16\0003\4\17\0005\5\18\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\19\0003\4\20\0005\5\21\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\22\0003\4\23\0005\5\24\0B\0\5\0016\0\6\0009\0\a\0009\0\b\0'\2\t\0'\3\25\0003\4\26\0005\5\27\0B\0\5\1K\0\1\0\1\0\3\tdesc\24Toggle Output Panel\vsilent\2\fnoremap\2\0\16<leader>too\1\0\3\tdesc\16Show Output\vsilent\2\fnoremap\2\0\15<leader>to\1\0\3\tdesc\19Toggle Summary\vsilent\2\fnoremap\2\0\15<leader>ts\1\0\3\tdesc\16Run Nearest\vsilent\2\fnoremap\2\0\15<leader>tr\1\0\3\tdesc\23Run All Test Files\vsilent\2\fnoremap\2\0\15<leader>tT\1\0\3\tdesc\rRun File\vsilent\2\fnoremap\2\0\15<leader>tt\6n\bset\vkeymap\bvim\radapters\1\0\0\19neotest-vitest\nsetup\fneotest\frequire\3€€À™\4\0", "config", "neotest")
+time([[Config for neotest]], false)
 -- Config for: statuscol.nvim
 time([[Config for statuscol.nvim]], true)
 try_loadstring("\27LJ\2\n›\2\0\0\b\0\14\0\0286\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\0015\3\4\0004\4\4\0005\5\6\0004\6\3\0009\a\5\0>\a\1\6=\6\a\5>\5\1\0045\5\t\0005\6\b\0=\6\a\5>\5\2\0045\5\f\0005\6\v\0009\a\n\0>\a\1\6=\6\a\5>\5\3\4=\4\r\3B\1\2\1K\0\1\0\rsegments\1\0\1\nclick\15v:lua.ScLa\1\3\0\0\0\6 \rlnumfunc\1\0\1\nclick\15v:lua.ScSa\1\2\0\0\a%s\ttext\1\0\1\nclick\15v:lua.ScFa\rfoldfunc\1\0\1\16relculright\2\nsetup\14statuscol\22statuscol.builtin\frequire\0", "config", "statuscol.nvim")
 time([[Config for statuscol.nvim]], false)
--- Config for: mini.surround
-time([[Config for mini.surround]], true)
-try_loadstring("\27LJ\2\n­\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\0\1\0\a\14highlight\bgsh\freplace\bgsr\vdelete\bgsd\19update_n_lines\bgsn\badd\bgsa\tfind\bgsf\14find_left\bgsF\nsetup\18mini.surround\frequire\0", "config", "mini.surround")
-time([[Config for mini.surround]], false)
+-- Config for: treesj
+time([[Config for treesj]], true)
+try_loadstring("\27LJ\2\n»\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\23<cmd>TSJToggle<cr>\14<leader>m\6n\20nvim_set_keymap\bapi\bvim\1\0\1\24use_default_keymaps\1\nsetup\vtreesj\frequire\0", "config", "treesj")
+time([[Config for treesj]], false)
 -- Config for: vim-browser-search
 time([[Config for vim-browser-search]], true)
-try_loadstring("\27LJ\2\nw\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\28:'<,'>BrowserSearch<CR>\n<A-s>\6v\20nvim_set_keymap\bapi\bvim\0", "config", "vim-browser-search")
+try_loadstring("\27LJ\2\nw\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\28:'<,'>BrowserSearch<CR>\n<A-s>\6v\20nvim_set_keymap\bapi\bvim\0", "config", "vim-browser-search")
 time([[Config for vim-browser-search]], false)
+-- Config for: mini.surround
+time([[Config for mini.surround]], true)
+try_loadstring("\27LJ\2\n­\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\0\1\0\a\freplace\bgsr\19update_n_lines\bgsn\14find_left\bgsF\14highlight\bgsh\vdelete\bgsd\tfind\bgsf\badd\bgsa\nsetup\18mini.surround\frequire\0", "config", "mini.surround")
+time([[Config for mini.surround]], false)
 -- Config for: nvim-ufo
 time([[Config for nvim-ufo]], true)
 try_loadstring("\27LJ\2\n¡\2\0\0\a\0\15\0\"6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0006\4\5\0'\6\6\0B\4\2\0029\4\a\0045\5\b\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\t\0006\4\5\0'\6\6\0B\4\2\0029\4\n\0045\5\v\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\f\0006\4\5\0'\6\6\0B\4\2\0029\4\r\0045\5\14\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\25openFoldsExceptKinds\azr\1\0\2\fnoremap\2\vsilent\2\18closeAllFolds\azM\1\0\2\fnoremap\2\vsilent\2\17openAllFolds\bufo\frequire\azR\6n\bset\vkeymap\bvim\0", "config", "nvim-ufo")
 time([[Config for nvim-ufo]], false)
+-- Config for: vim-visual-multi
+time([[Config for vim-visual-multi]], true)
+try_loadstring("\27LJ\2\n-\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\6;\14VM_leader\6g\bvim\0", "config", "vim-visual-multi")
+time([[Config for vim-visual-multi]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType typescript ++once lua require("packer.load")({'template-string.nvim'}, { ft = "typescript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascriptreact ++once lua require("packer.load")({'template-string.nvim'}, { ft = "javascriptreact" }, _G.packer_plugins)]]
 vim.cmd [[au FileType typescriptreact ++once lua require("packer.load")({'template-string.nvim'}, { ft = "typescriptreact" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'template-string.nvim'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript ++once lua require("packer.load")({'template-string.nvim'}, { ft = "typescript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascriptreact ++once lua require("packer.load")({'template-string.nvim'}, { ft = "javascriptreact" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufReadPost * ++once lua require("packer.load")({'vim-easy-align'}, { event = "BufReadPost *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'template-string.nvim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufReadPost * ++once lua require("packer.load")({'vim-easy-align'}, { event = "BufReadPost *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

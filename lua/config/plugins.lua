@@ -158,9 +158,9 @@ return require('packer').startup {
         }
       },
       config = function()
-        vim.keymap.set('n', 'zR', require('ufo').openAllFolds, {silent=true, noremap=true})
-        vim.keymap.set('n', 'zM', require('ufo').closeAllFolds, {silent=true, noremap=true})
-        vim.keymap.set('n', 'zr', require('ufo').openFoldsExceptKinds, {silent=true, noremap=true})
+        vim.keymap.set('n', 'zR', require('ufo').openAllFolds, { silent = true, noremap = true })
+        vim.keymap.set('n', 'zM', require('ufo').closeAllFolds, { silent = true, noremap = true })
+        vim.keymap.set('n', 'zr', require('ufo').openFoldsExceptKinds, { silent = true, noremap = true })
       end,
     }
 
@@ -169,7 +169,7 @@ return require('packer').startup {
       requires = { 'nvim-treesitter/nvim-treesitter' },
       config = function()
         require('treesj').setup({ use_default_keymaps = false })
-        vim.api.nvim_set_keymap("n", "<leader>m", "<cmd>TSJToggle<cr>", {silent=true, noremap=true})
+        vim.api.nvim_set_keymap("n", "<leader>m", "<cmd>TSJToggle<cr>", { silent = true, noremap = true })
       end,
     })
 
@@ -209,6 +209,29 @@ return require('packer').startup {
     use {
       'lalitmee/browse.nvim',
       requires = { 'nvim-telescope/telescope.nvim' },
+    }
+
+    use {
+      "nvim-neotest/neotest",
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-treesitter/nvim-treesitter",
+        "antoinemadec/FixCursorHold.nvim",
+        'marilari88/neotest-vitest',
+      },
+      config = function()
+        require('neotest').setup({
+          adapters = {
+            require('neotest-vitest')
+          }
+        })
+        vim.keymap.set("n", "<leader>tt",function() require("neotest").run.run(vim.fn.expand("%")) end, {noremap=true, silent=true, desc="Run File"})
+        vim.keymap.set("n", "<leader>tT",function() require("neotest").run.run(vim.loop.cwd()) end, {noremap=true, silent=true, desc="Run All Test Files"})
+        vim.keymap.set("n", "<leader>tr",function() require("neotest").run.run() end, {noremap=true, silent=true, desc="Run Nearest"})
+        vim.keymap.set("n", "<leader>ts",function() require("neotest").summary.toggle() end, {noremap=true, silent=true, desc="Toggle Summary"})
+        vim.keymap.set("n", "<leader>to",function() require("neotest").output.open({ enter = true, auto_close = true }) end, {noremap=true, silent=true, desc="Show Output"})
+        vim.keymap.set("n", "<leader>too",function() require("neotest").output_panel.toggle() end, {noremap=true, silent=true, desc="Toggle Output Panel"})
+      end
     }
     ----------------------
 
