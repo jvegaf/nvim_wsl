@@ -1,7 +1,5 @@
 local status, nvim_tree = pcall(require, "nvim-tree")
-if not status then
-  return
-end
+if not status then return end
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
@@ -11,9 +9,12 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 nvim_tree.setup {
-  -- disable_netrw = true,
-  reload_on_bufenter = true,
+  sync_root_with_cwd = true,
   respect_buf_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_root = true
+  },
   diagnostics = {
     enable = true,
     icons = {
@@ -41,11 +42,6 @@ nvim_tree.setup {
       },
     },
   },
-  -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
-  update_focused_file = {
-    enable = true,
-    -- update_root = true,
-  },
   git = {
     timeout = 500,
   },
@@ -55,24 +51,20 @@ nvim_tree.setup {
       resize_window = false,
     },
   },
-  -- tab = {
-  --   sync = {
-  --     open = true,
-  --     close = true,
-  --     ignore = {},
-  --   },
-  -- },
-  -- modified = {
-  --   enable = true,
-  -- },
   view = {
     width = 40,
     side = "left",
-    relativenumber = true,
   },
   trash = {
     cmd = "trash",
     require_confirm = true,
+  },
+  tab = {
+    sync = {
+      open = true,
+      close = true,
+      ignore = {},
+    },
   },
 }
 

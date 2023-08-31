@@ -165,6 +165,7 @@ local mappings = {
     c = { "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>", 'Colorscheme' },
     k = { '<cmd>Telescope keymaps<cr>', 'Keymaps' },
     l = { '<cmd>Telescope resume<cr>', 'Last Search' },
+    p = { '<cmd>Telescope projects<cr>', 'Projects' },
     r = { '<cmd>Telescope oldfiles<cr>', 'Recent File' },
     t = { '<cmd>Telescope live_grep<cr>', 'Find Text' },
   },

@@ -79,23 +79,25 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
   end,
 })
 
+augroup("SessionGroup")
+
 -- Session loaded
 vim.api.nvim_create_autocmd({ "User" }, {
   pattern = "SessionLoadPost",
-  -- group = config_group,
+  group = "SessionGroup",
   callback = function()
-    -- require("nvim-tree").toggle(false, true)
-    require "notify"("Session loaded!", "info", { title = "Session Manager" })
+    -- require('nvim-tree.api').tree.toggle(false, true)
+    require "notify" ("Session loaded!", "info", { title = "Session Manager" })
   end,
 })
 
 -- Session Saved
 vim.api.nvim_create_autocmd({ "User" }, {
   pattern = "SessionSavePost",
-  -- group = config_group,
+  group = "SessionGroup",
   callback = function()
-    require "notify"("Session saved!", "info", { title = "Session Manager", bufid = 0 })
-    -- require("nvim-tree").toggle(false, true)
+    require "notify" ("Session saved!", "info", { title = "Session Manager", bufid = 0 })
+    -- require('nvim-tree.api').tree.toggle(false, true)
   end,
 })
 
@@ -107,11 +109,11 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEnter'}, {
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufAdd', 'BufNew', 'BufNewFile', 'BufWinEnter' }, {
   group = vim.api.nvim_create_augroup('TS_FOLD_WORKAROUND', {}),
   callback = function()
-    vim.opt.foldmethod     = 'expr'
-    vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
+    vim.opt.foldmethod = 'expr'
+    vim.opt.foldexpr   = 'nvim_treesitter#foldexpr()'
   end
 })
 

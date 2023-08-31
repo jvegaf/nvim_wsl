@@ -107,6 +107,17 @@ return require('packer').startup {
     }
 
     use {
+      'antosha417/nvim-lsp-file-operations',
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-tree.lua",
+      },
+      config = function()
+        require("lsp-file-operations").setup()
+      end
+    }
+
+    use {
       "pmizio/typescript-tools.nvim",
       requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
       config = function()
@@ -131,13 +142,11 @@ return require('packer').startup {
     }
 
     use {
-      "ahmedkhalf/project.nvim",
-      requires = "nvim-telescope/telescope.nvim",
-      config = function()
-        require("project_nvim").setup {
-          require('telescope').load_extension('projects')
-        }
-      end
+      "coffebar/project.nvim",
+      requires = {
+        "nvim-telescope/telescope.nvim",
+        "Shatur/neovim-session-manager",
+      },
     }
 
     use 'windwp/nvim-spectre'
