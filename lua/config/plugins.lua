@@ -81,14 +81,8 @@ return require('packer').startup {
     }
 
     use {
-      "jcdickinson/http.nvim",
-      run = "cargo build --workspace --release"
-    }
-
-    use {
       "jcdickinson/codeium.nvim",
       requires = {
-        "jcdickinson/http.nvim",
         "nvim-lua/plenary.nvim",
         "hrsh7th/nvim-cmp",
       },

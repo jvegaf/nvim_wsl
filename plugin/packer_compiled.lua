@@ -174,11 +174,6 @@ _G.packer_plugins = {
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
-  ["http.nvim"] = {
-    loaded = true,
-    path = "/home/jevf/.local/share/nvim/site/pack/packer/start/http.nvim",
-    url = "https://github.com/jcdickinson/http.nvim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -215,7 +210,7 @@ _G.packer_plugins = {
     url = "https://github.com/echasnovski/mini.indentscope"
   },
   ["mini.surround"] = {
-    config = { "\27LJ\2\n­\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\0\1\0\a\14find_left\bgsF\badd\bgsa\freplace\bgsr\vdelete\bgsd\19update_n_lines\bgsn\tfind\bgsf\14highlight\bgsh\nsetup\18mini.surround\frequire\0" },
+    config = { "\27LJ\2\n­\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\0\1\0\a\badd\bgsa\tfind\bgsf\freplace\bgsr\19update_n_lines\bgsn\14find_left\bgsF\14highlight\bgsh\vdelete\bgsd\nsetup\18mini.surround\frequire\0" },
     loaded = true,
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/mini.surround",
     url = "https://github.com/echasnovski/mini.surround"
@@ -288,7 +283,7 @@ _G.packer_plugins = {
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-ufo"] = {
-    config = { "\27LJ\2\n¡\2\0\0\a\0\15\0\"6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0006\4\5\0'\6\6\0B\4\2\0029\4\a\0045\5\b\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\t\0006\4\5\0'\6\6\0B\4\2\0029\4\n\0045\5\v\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\f\0006\4\5\0'\6\6\0B\4\2\0029\4\r\0045\5\14\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\25openFoldsExceptKinds\azr\1\0\2\vsilent\2\fnoremap\2\18closeAllFolds\azM\1\0\2\vsilent\2\fnoremap\2\17openAllFolds\bufo\frequire\azR\6n\bset\vkeymap\bvim\0" },
+    config = { "\27LJ\2\n¡\2\0\0\a\0\15\0\"6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0006\4\5\0'\6\6\0B\4\2\0029\4\a\0045\5\b\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\t\0006\4\5\0'\6\6\0B\4\2\0029\4\n\0045\5\v\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\f\0006\4\5\0'\6\6\0B\4\2\0029\4\r\0045\5\14\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\25openFoldsExceptKinds\azr\1\0\2\fnoremap\2\vsilent\2\18closeAllFolds\azM\1\0\2\fnoremap\2\vsilent\2\17openAllFolds\bufo\frequire\azR\6n\bset\vkeymap\bvim\0" },
     loaded = true,
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/nvim-ufo",
     url = "https://github.com/kevinhwang91/nvim-ufo"
@@ -347,7 +342,7 @@ _G.packer_plugins = {
     url = "https://github.com/lpoto/telescope-tasks.nvim"
   },
   ["telescope-undo.nvim"] = {
-    config = { "\27LJ\2\nÉ\2\0\0\6\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\6\0005\4\3\0005\5\4\0=\5\5\4=\4\a\3=\3\t\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\n\0'\2\a\0B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0005\5\17\0B\0\5\1K\0\1\0\1\0\1\tdesc\rUndoTree\28<cmd>Telescope undo<cr>\14<leader>u\6n\bset\vkeymap\bvim\19load_extension\15extensions\1\0\0\tundo\1\0\0\18layout_config\1\0\1\19preview_height\4š³æÌ\t™³¦ÿ\3\1\0\2\20layout_strategy\rvertical\17side_by_side\2\nsetup\14telescope\frequire\0" },
+    config = { "\27LJ\2\nÉ\2\0\0\6\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\6\0005\4\3\0005\5\4\0=\5\5\4=\4\a\3=\3\t\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\n\0'\2\a\0B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0005\5\17\0B\0\5\1K\0\1\0\1\0\1\tdesc\rUndoTree\28<cmd>Telescope undo<cr>\14<leader>u\6n\bset\vkeymap\bvim\19load_extension\15extensions\1\0\0\tundo\1\0\0\18layout_config\1\0\1\19preview_height\4š³æÌ\t™³¦ÿ\3\1\0\2\17side_by_side\2\20layout_strategy\rvertical\nsetup\14telescope\frequire\0" },
     loaded = true,
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/telescope-undo.nvim",
     url = "https://github.com/debugloop/telescope-undo.nvim"
@@ -376,7 +371,7 @@ _G.packer_plugins = {
     url = "https://github.com/folke/tokyonight.nvim"
   },
   treesj = {
-    config = { "\27LJ\2\n²\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\23<cmd>TSJToggle<cr>\14<leader>j\6n\bset\vkeymap\bvim\1\0\1\24use_default_keymaps\1\nsetup\vtreesj\frequire\0" },
+    config = { "\27LJ\2\n²\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\23<cmd>TSJToggle<cr>\14<leader>j\6n\bset\vkeymap\bvim\1\0\1\24use_default_keymaps\1\nsetup\vtreesj\frequire\0" },
     loaded = true,
     path = "/home/jevf/.local/share/nvim/site/pack/packer/start/treesj",
     url = "https://github.com/Wansmer/treesj"
@@ -428,14 +423,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: treesj
-time([[Config for treesj]], true)
-try_loadstring("\27LJ\2\n²\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\23<cmd>TSJToggle<cr>\14<leader>j\6n\bset\vkeymap\bvim\1\0\1\24use_default_keymaps\1\nsetup\vtreesj\frequire\0", "config", "treesj")
-time([[Config for treesj]], false)
--- Config for: telescope-git-diffs.nvim
-time([[Config for telescope-git-diffs.nvim]], true)
-try_loadstring("\27LJ\2\nN\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\14git_diffs\19load_extension\14telescope\frequire\0", "config", "telescope-git-diffs.nvim")
-time([[Config for telescope-git-diffs.nvim]], false)
 -- Config for: typescript-tools.nvim
 time([[Config for typescript-tools.nvim]], true)
 try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0", "config", "typescript-tools.nvim")
@@ -446,45 +433,53 @@ try_loadstring("\27LJ\2\nJ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0
 time([[Config for telescope-tasks.nvim]], false)
 -- Config for: mini.surround
 time([[Config for mini.surround]], true)
-try_loadstring("\27LJ\2\n­\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\0\1\0\a\14find_left\bgsF\badd\bgsa\freplace\bgsr\vdelete\bgsd\19update_n_lines\bgsn\tfind\bgsf\14highlight\bgsh\nsetup\18mini.surround\frequire\0", "config", "mini.surround")
+try_loadstring("\27LJ\2\n­\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rmappings\1\0\0\1\0\a\badd\bgsa\tfind\bgsf\freplace\bgsr\19update_n_lines\bgsn\14find_left\bgsF\14highlight\bgsh\vdelete\bgsd\nsetup\18mini.surround\frequire\0", "config", "mini.surround")
 time([[Config for mini.surround]], false)
--- Config for: nvim-ufo
-time([[Config for nvim-ufo]], true)
-try_loadstring("\27LJ\2\n¡\2\0\0\a\0\15\0\"6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0006\4\5\0'\6\6\0B\4\2\0029\4\a\0045\5\b\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\t\0006\4\5\0'\6\6\0B\4\2\0029\4\n\0045\5\v\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\f\0006\4\5\0'\6\6\0B\4\2\0029\4\r\0045\5\14\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\25openFoldsExceptKinds\azr\1\0\2\vsilent\2\fnoremap\2\18closeAllFolds\azM\1\0\2\vsilent\2\fnoremap\2\17openAllFolds\bufo\frequire\azR\6n\bset\vkeymap\bvim\0", "config", "nvim-ufo")
-time([[Config for nvim-ufo]], false)
 -- Config for: neotest
 time([[Config for neotest]], true)
 try_loadstring("\27LJ\2\nr\0\0\a\0\6\1\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0?\4\0\0=\3\5\2B\0\2\1K\0\1\0\radapters\1\0\0\19neotest-vitest\nsetup\fneotest\frequire\3€€À™\4\0", "config", "neotest")
 time([[Config for neotest]], false)
--- Config for: statuscol.nvim
-time([[Config for statuscol.nvim]], true)
-try_loadstring("\27LJ\2\n›\2\0\0\b\0\14\0\0286\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\0015\3\4\0004\4\4\0005\5\6\0004\6\3\0009\a\5\0>\a\1\6=\6\a\5>\5\1\0045\5\t\0005\6\b\0=\6\a\5>\5\2\0045\5\f\0005\6\v\0009\a\n\0>\a\1\6=\6\a\5>\5\3\4=\4\r\3B\1\2\1K\0\1\0\rsegments\1\0\1\nclick\15v:lua.ScLa\1\3\0\0\0\6 \rlnumfunc\1\0\1\nclick\15v:lua.ScSa\1\2\0\0\a%s\ttext\1\0\1\nclick\15v:lua.ScFa\rfoldfunc\1\0\1\16relculright\2\nsetup\14statuscol\22statuscol.builtin\frequire\0", "config", "statuscol.nvim")
-time([[Config for statuscol.nvim]], false)
+-- Config for: telescope-undo.nvim
+time([[Config for telescope-undo.nvim]], true)
+try_loadstring("\27LJ\2\nÉ\2\0\0\6\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\6\0005\4\3\0005\5\4\0=\5\5\4=\4\a\3=\3\t\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\n\0'\2\a\0B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0005\5\17\0B\0\5\1K\0\1\0\1\0\1\tdesc\rUndoTree\28<cmd>Telescope undo<cr>\14<leader>u\6n\bset\vkeymap\bvim\19load_extension\15extensions\1\0\0\tundo\1\0\0\18layout_config\1\0\1\19preview_height\4š³æÌ\t™³¦ÿ\3\1\0\2\17side_by_side\2\20layout_strategy\rvertical\nsetup\14telescope\frequire\0", "config", "telescope-undo.nvim")
+time([[Config for telescope-undo.nvim]], false)
 -- Config for: vim-visual-multi
 time([[Config for vim-visual-multi]], true)
 try_loadstring("\27LJ\2\n-\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\6;\14VM_leader\6g\bvim\0", "config", "vim-visual-multi")
 time([[Config for vim-visual-multi]], false)
--- Config for: telescope-undo.nvim
-time([[Config for telescope-undo.nvim]], true)
-try_loadstring("\27LJ\2\nÉ\2\0\0\6\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\6\0005\4\3\0005\5\4\0=\5\5\4=\4\a\3=\3\t\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\n\0'\2\a\0B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0005\5\17\0B\0\5\1K\0\1\0\1\0\1\tdesc\rUndoTree\28<cmd>Telescope undo<cr>\14<leader>u\6n\bset\vkeymap\bvim\19load_extension\15extensions\1\0\0\tundo\1\0\0\18layout_config\1\0\1\19preview_height\4š³æÌ\t™³¦ÿ\3\1\0\2\20layout_strategy\rvertical\17side_by_side\2\nsetup\14telescope\frequire\0", "config", "telescope-undo.nvim")
-time([[Config for telescope-undo.nvim]], false)
+-- Config for: statuscol.nvim
+time([[Config for statuscol.nvim]], true)
+try_loadstring("\27LJ\2\n›\2\0\0\b\0\14\0\0286\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\1\3\0015\3\4\0004\4\4\0005\5\6\0004\6\3\0009\a\5\0>\a\1\6=\6\a\5>\5\1\0045\5\t\0005\6\b\0=\6\a\5>\5\2\0045\5\f\0005\6\v\0009\a\n\0>\a\1\6=\6\a\5>\5\3\4=\4\r\3B\1\2\1K\0\1\0\rsegments\1\0\1\nclick\15v:lua.ScLa\1\3\0\0\0\6 \rlnumfunc\1\0\1\nclick\15v:lua.ScSa\1\2\0\0\a%s\ttext\1\0\1\nclick\15v:lua.ScFa\rfoldfunc\1\0\1\16relculright\2\nsetup\14statuscol\22statuscol.builtin\frequire\0", "config", "statuscol.nvim")
+time([[Config for statuscol.nvim]], false)
 -- Config for: nvim-lsp-file-operations
 time([[Config for nvim-lsp-file-operations]], true)
 try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lsp-file-operations\frequire\0", "config", "nvim-lsp-file-operations")
 time([[Config for nvim-lsp-file-operations]], false)
+-- Config for: nvim-ufo
+time([[Config for nvim-ufo]], true)
+try_loadstring("\27LJ\2\n¡\2\0\0\a\0\15\0\"6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0006\4\5\0'\6\6\0B\4\2\0029\4\a\0045\5\b\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\t\0006\4\5\0'\6\6\0B\4\2\0029\4\n\0045\5\v\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\f\0006\4\5\0'\6\6\0B\4\2\0029\4\r\0045\5\14\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\25openFoldsExceptKinds\azr\1\0\2\fnoremap\2\vsilent\2\18closeAllFolds\azM\1\0\2\fnoremap\2\vsilent\2\17openAllFolds\bufo\frequire\azR\6n\bset\vkeymap\bvim\0", "config", "nvim-ufo")
+time([[Config for nvim-ufo]], false)
+-- Config for: treesj
+time([[Config for treesj]], true)
+try_loadstring("\27LJ\2\n²\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\23<cmd>TSJToggle<cr>\14<leader>j\6n\bset\vkeymap\bvim\1\0\1\24use_default_keymaps\1\nsetup\vtreesj\frequire\0", "config", "treesj")
+time([[Config for treesj]], false)
+-- Config for: telescope-git-diffs.nvim
+time([[Config for telescope-git-diffs.nvim]], true)
+try_loadstring("\27LJ\2\nN\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\14git_diffs\19load_extension\14telescope\frequire\0", "config", "telescope-git-diffs.nvim")
+time([[Config for telescope-git-diffs.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType typescriptreact ++once lua require("packer.load")({'template-string.nvim'}, { ft = "typescriptreact" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'template-string.nvim'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType typescript ++once lua require("packer.load")({'template-string.nvim'}, { ft = "typescript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascriptreact ++once lua require("packer.load")({'template-string.nvim'}, { ft = "javascriptreact" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescriptreact ++once lua require("packer.load")({'template-string.nvim'}, { ft = "typescriptreact" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'template-string.nvim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufReadPost * ++once lua require("packer.load")({'vim-easy-align'}, { event = "BufReadPost *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'template-string.nvim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
