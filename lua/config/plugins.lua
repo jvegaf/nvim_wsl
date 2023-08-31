@@ -28,6 +28,52 @@ return require('packer').startup {
       requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+    use {
+      "debugloop/telescope-undo.nvim",
+      requires = "nvim-telescope/telescope.nvim",
+      config = function()
+        require("telescope").setup({
+          extensions = {
+            undo = {
+              side_by_side = true,
+              layout_strategy = "vertical",
+              layout_config = {
+                preview_height = 0.8,
+              },
+            },
+          },
+        })
+        require("telescope").load_extension("undo")
+        vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "UndoTree" })
+      end
+    }
+
+    use {
+      "paopaol/telescope-git-diffs.nvim",
+      requires = {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim",
+        "sindrets/diffview.nvim",
+      },
+      config = function()
+        require("telescope").load_extension("git_diffs")
+      end
+
+    }
+
+    use {
+      "lpoto/telescope-tasks.nvim",
+      requires = {
+        "nvim-telescope/telescope.nvim",
+      },
+      config = function()
+        require("telescope").load_extension "tasks"
+      end
+
+    }
+
+    use("RRethy/vim-illuminate")
+
     use { "folke/tokyonight.nvim" }
 
     use {
@@ -66,8 +112,11 @@ return require('packer').startup {
 
     use("theprimeagen/harpoon")
     use("theprimeagen/refactoring.nvim")
-    use("mbbill/undotree")
-    use("tpope/vim-fugitive")
+
+    use("dinhhuy258/git.nvim")
+    use("lewis6991/gitsigns.nvim")
+    use("akinsho/git-conflict.nvim")
+    use("sindrets/diffview.nvim")
 
     use {
       'VonHeikemen/lsp-zero.nvim',
@@ -250,19 +299,6 @@ return require('packer').startup {
             require('neotest-vitest')
           }
         })
-        vim.keymap.set("n", "<leader>tt", function() require("neotest").run.run(vim.fn.expand("%")) end,
-          { noremap = true, silent = true, desc = "Run File" })
-        vim.keymap.set("n", "<leader>tT", function() require("neotest").run.run(vim.loop.cwd()) end,
-          { noremap = true, silent = true, desc = "Run All Test Files" })
-        vim.keymap.set("n", "<leader>tr", function() require("neotest").run.run() end,
-          { noremap = true, silent = true, desc = "Run Nearest" })
-        vim.keymap.set("n", "<leader>ts", function() require("neotest").summary.toggle() end,
-          { noremap = true, silent = true, desc = "Toggle Summary" })
-        vim.keymap.set("n", "<leader>to",
-          function() require("neotest").output.open({ enter = true, auto_close = true }) end,
-          { noremap = true, silent = true, desc = "Show Output" })
-        vim.keymap.set("n", "<leader>too", function() require("neotest").output_panel.toggle() end,
-          { noremap = true, silent = true, desc = "Toggle Output Panel" })
       end
     }
     ----------------------

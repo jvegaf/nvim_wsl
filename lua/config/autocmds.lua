@@ -101,6 +101,18 @@ vim.api.nvim_create_autocmd({ "User" }, {
   end,
 })
 
+-- vim.api.nvim_create_autocmd({ 'VimLeavePre' }, {
+--   group = "SessionGroup",
+--   callback = function()
+--     if vim.bo.filetype ~= 'git'
+--         and not vim.bo.filetype ~= 'gitcommit'
+--         and not vim.bo.filetype ~= 'gitrebase'
+--     then
+--       require('session_manager').save_current_session()
+--     end
+--   end
+-- })
+
 -- resize splits if window got resized
 vim.api.nvim_create_autocmd({ "VimResized" }, {
   group = augroup "resize_splits",

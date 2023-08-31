@@ -172,24 +172,25 @@ local mappings = {
   g = {
     name = 'Git',
     g = { '<cmd>lua _LAZYGIT_TOGGLE()<CR>', 'Lazygit' },
-    j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", 'Next Hunk' },
-    k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", 'Prev Hunk' },
-    l = { '<cmd>GitBlameToggle<cr>', 'Blame' },
-    p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", 'Preview Hunk' },
-    r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", 'Reset Hunk' },
+    h = {
+          name = "Hunk",
+          j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", 'Next Hunk' },
+          k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", 'Prev Hunk' },
+          p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", 'Preview Hunk' },
+          r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", 'Reset Hunk' },
+          s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", 'Stage Hunk' },
+          u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", 'Undo Stage Hunk' },
+
+    },
+    l = { '<cmd>GitBlame<cr>', 'Blame' },
     R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", 'Reset Buffer' },
-    s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", 'Stage Hunk' },
-    u = {
-      "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-      'Undo Stage Hunk',
-    },
-    o = { '<cmd>Telescope git_status<cr>', 'Open changed file' },
+    f = { '<cmd>DiffviewFileHistory %<cr>', 'File History' },
+    s = { '<cmd>Telescope git_status<cr>', 'Open changed file' },
     b = { '<cmd>Telescope git_branches<cr>', 'Checkout branch' },
-    c = { '<cmd>Telescope git_commits<cr>', 'Checkout commit' },
-    d = {
-      '<cmd>DiffviewOpen<cr>',
-      'Diff',
-    },
+    k = { '<cmd>Telescope git_commits<cr>', 'Checkout commit' },
+    z = { '<cmd>DiffviewOpen<cr>', 'Diff' },
+    d = { '<cmd>Telescope git_diffs  diff_commits<cr>', 'Diff Commits'},
+    c = { '<cmd>DiffViewClose<cr>', 'DiffView Close'},
     G = {
       name = 'Gist',
       a = { '<cmd>Gist -b -a<cr>', 'Create Anon' },
@@ -202,34 +203,22 @@ local mappings = {
   },
   l = {
     name = 'LSP',
-    a = { '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Code Action' },
-    c = { "<cmd>lua require('user.lsp').server_capabilities()<cr>", 'Get Capabilities' },
-    w = {
-      '<cmd>Telescope lsp_workspace_diagnostics<cr>',
-      'Workspace Diagnostics',
-    },
-    i = { '<cmd>LspInfo<cr>', 'Info' },
-    h = { "<cmd>lua require('lsp-inlayhints').toggle()<cr>", 'Toggle Hints' },
     H = { '<cmd>IlluminationToggle<cr>', 'Toggle Doc HL' },
     I = { '<cmd>LspInstallInfo<cr>', 'Installer Info' },
-    j = {
-      '<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>',
-      'Next Diagnostic',
-    },
-    k = {
-      '<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>',
-      'Prev Diagnostic',
-    },
+    R = { '<cmd>TroubleToggle lsp_references<cr>', 'References' },
+    S = { '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>', 'Workspace Symbols' },
+    a = { '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Code Action' },
+    c = { "<cmd>lua require('user.lsp').server_capabilities()<cr>", 'Get Capabilities' },
+    h = { "<cmd>lua require('lsp-inlayhints').toggle()<cr>", 'Toggle Hints' },
+    i = { '<cmd>LspInfo<cr>', 'Info' },
+    j = { '<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>', 'Next Diagnostic' },
+    k = { '<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>', 'Prev Diagnostic' },
     l = { '<cmd>lua vim.lsp.codelens.run()<cr>', 'CodeLens Action' },
     q = { '<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>', 'Quickfix' },
     r = { '<cmd>lua vim.lsp.buf.rename()<cr>', 'Rename' },
-    R = { '<cmd>TroubleToggle lsp_references<cr>', 'References' },
     s = { '<cmd>Telescope lsp_document_symbols<cr>', 'Document Symbols' },
-    S = {
-      '<cmd>Telescope lsp_dynamic_workspace_symbols<cr>',
-      'Workspace Symbols',
-    },
     t = { '<cmd>lua require("user.functions").toggle_diagnostics()<cr>', 'Toggle Diagnostics' },
+    w = { '<cmd>Telescope lsp_workspace_diagnostics<cr>', 'Workspace Diagnostics' },
   },
   -- t = {
   --   name = 'Terminal',
@@ -240,12 +229,23 @@ local mappings = {
   -- },
   t = {
     name = 'Test',
+    t = { '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>', 'Run File' },
+    T = { '<cmd>lua require("neotest").run.run(vim.loop.cwd())<cr>', 'Run All Tests' },
+    r = { '<cmd>lua require("neotest").run.run()<cr>', 'Run Nearest' },
+    s = { '<cmd>lua require("neotest").summary.toggle()<cr>', 'Summary' },
+    o = { '<cmd>lua require("neotest").output.open({ enter = true, auto_close = true })<cr>', 'Show Output' },
+    p = { '<cmd>lua require("neotest").output_panel.toggle()<cr>', 'Output Panel' },
   },
   T = {
     name = 'Treesitter',
     h = { '<cmd>TSHighlightCapturesUnderCursor<cr>', 'Highlight' },
     p = { '<cmd>TSPlaygroundToggle<cr>', 'Playground' },
     r = { '<cmd>TSToggle rainbow<cr>', 'Rainbow' },
+  },
+  z = {
+    name = 'Tasks',
+    z = { '<cmd>Telescope tasks<cr>', 'Tasks' },
+    l = { '<cmd>lua require("telescope").extensions.tasks.actions.toggle_last_output()<cr>', 'Toggle Last Output' },
   },
 }
 
@@ -262,6 +262,7 @@ local vmappings = {
   S = { "<esc><cmd>'<,'>SnipRun<cr>", 'Run range' },
   s = { "<cmd>VisualSearch<cr>", 'Search in Google' },
   b = { "<cmd>VisualBookmarks<cr>", 'Search in Web' },
+  h = { "<esc><cmd>'<,'>DiffviewFileHistory<cr>", 'Selected Git History' },
   -- z = { "<cmd>TZNarrow<cr>", "Narrow" },
 }
 
