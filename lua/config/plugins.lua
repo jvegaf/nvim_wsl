@@ -35,14 +35,7 @@ return require('packer').startup {
     }
 
 
-    use({
-      "folke/trouble.nvim",
-      config = function()
-        require("trouble").setup {
-          icons = false,
-        }
-      end
-    })
+    use("folke/trouble.nvim")
 
     use {
       'axelvc/template-string.nvim',
@@ -100,10 +93,11 @@ return require('packer').startup {
     }
 
     use {
-      'nvim-lualine/lualine.nvim',
+      "nvim-lualine/lualine.nvim",
+      requires = {
+        "arkav/lualine-lsp-progress"
+      }
     }
-
-    use("arkav/lualine-lsp-progress")
 
     use {
       'nvim-tree/nvim-tree.lua',
