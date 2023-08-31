@@ -220,13 +220,6 @@ local mappings = {
     t = { '<cmd>lua require("user.functions").toggle_diagnostics()<cr>', 'Toggle Diagnostics' },
     w = { '<cmd>Telescope lsp_workspace_diagnostics<cr>', 'Workspace Diagnostics' },
   },
-  -- t = {
-  --   name = 'Terminal',
-  --   n = { '<cmd>lua _NODE_TOGGLE()<cr>', 'Node' },
-  --   u = { '<cmd>lua _NCDU_TOGGLE()<cr>', 'NCDU' },
-  --   t = { '<cmd>lua _HTOP_TOGGLE()<cr>', 'Htop' },
-  --   p = { '<cmd>lua _PYTHON_TOGGLE()<cr>', 'Python' },
-  -- },
   t = {
     name = 'Test',
     t = { '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>', 'Run File' },
