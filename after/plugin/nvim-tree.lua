@@ -13,7 +13,7 @@ vim.opt.termguicolors = true
 nvim_tree.setup {
   -- disable_netrw = true,
   reload_on_bufenter = true,
-  -- respect_buf_cwd = true,
+  respect_buf_cwd = true,
   diagnostics = {
     enable = true,
     icons = {
@@ -44,7 +44,7 @@ nvim_tree.setup {
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
   update_focused_file = {
     enable = true,
-    update_root = true,
+    -- update_root = true,
   },
   git = {
     timeout = 500,
@@ -62,9 +62,9 @@ nvim_tree.setup {
   --     ignore = {},
   --   },
   -- },
-  modified = {
-    enable = true,
-  },
+  -- modified = {
+  --   enable = true,
+  -- },
   view = {
     width = 40,
     side = "left",

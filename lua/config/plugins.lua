@@ -121,11 +121,13 @@ return require('packer').startup {
       },
     }
 
+    use('stevearc/dressing.nvim')
+
     use {
-      'voldikss/vim-browser-search',
-      config = function()
-        vim.keymap.set('v', '<A-s>', ":'<,'>BrowserSearch<CR>", { noremap = true, silent = true })
-      end
+      'jvegaf/browse.nvim',
+      requires = {
+        'nvim-telescope/telescope.nvim',
+      },
     }
 
     use {
@@ -221,11 +223,6 @@ return require('packer').startup {
 
     use {
       'folke/which-key.nvim',
-    }
-
-    use {
-      'lalitmee/browse.nvim',
-      requires = { 'nvim-telescope/telescope.nvim' },
     }
 
     use("akinsho/bufferline.nvim")

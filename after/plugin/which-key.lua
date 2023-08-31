@@ -103,16 +103,14 @@ local m_mappings = {
 }
 
 local mappings = {
-  -- ["1"] = "which_key_ignore",
-  -- h = { "<cmd>nohlsearch<CR>", "No HL" },
   ['gy'] = 'Link',
-  B = {
+  b = {
     name = 'Browse',
-    i = { '<cmd>BrowseInputSearch<cr>', 'Input Search' },
-    b = { '<cmd>Browse<cr>', 'Browse' },
-    d = { '<cmd>BrowseDevdocsSearch<cr>', 'Devdocs' },
-    f = { '<cmd>BrowseDevdocsFiletypeSearch<cr>', 'Devdocs Filetype' },
-    m = { '<cmd>BrowseMdnSearch<cr>', 'Mdn' },
+    i = { '<cmd>InputSearch<cr>', 'Input Search' },
+    b = { '<cmd>Browse<cr>', 'Browse Menu' },
+    d = { '<cmd>DevdocsSearch<cr>', 'Devdocs' },
+    f = { '<cmd>DevdocsFiletypeSearch<cr>', 'Devdocs Filetype' },
+    m = { '<cmd>MdnSearch<cr>', 'Mdn' },
   },
   p = {
     name = 'Packer',
@@ -260,7 +258,9 @@ local vopts = {
 }
 local vmappings = {
   ['/'] = { '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', 'Comment' },
-  s = { "<esc><cmd>'<,'>SnipRun<cr>", 'Run range' },
+  S = { "<esc><cmd>'<,'>SnipRun<cr>", 'Run range' },
+  s = { "<cmd>VisualSearch<cr>", 'Search in Google' },
+  b = { "<cmd>VisualBookmarks<cr>", 'Search in Web' },
   -- z = { "<cmd>TZNarrow<cr>", "Narrow" },
 }
 
