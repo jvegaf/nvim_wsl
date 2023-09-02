@@ -1,13 +1,16 @@
-local lsp = require("lsp-zero")
+local status, lsp = pcall(require, "lsp-zero")
+if not status then return end
 
-lsp.preset("recommended")
+lsp.preset()
 
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
   'lua_ls',
+  'eslint',
   'jsonls',
   'yamlls',
+  'clangd',
 })
 
 -- Fix Undefined global 'vim'
@@ -20,7 +23,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
   ['<CR>'] = cmp.mapping.confirm({ select = true }),
-  ["<C-Space>"] = cmp.mapping.complete(),
+  ["<C-.>"] = cmp.mapping.complete(),
 })
 
 cmp_mappings['<Tab>'] = nil
@@ -29,16 +32,6 @@ cmp_mappings['<S-Tab>'] = nil
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
-
--- lsp.set_preferences({
---     suggest_lsp_servers = false,
---     sign_icons = {
---         error = ' ',
---         warn  = ' ',
---         hint  = ' ',
---         info  = ' '
---     }
--- })
 
 lsp.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
@@ -55,7 +48,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.format_mapping('gq', {
+lsp.format_mapping('gf', {
   format_opts = {
     async = false,
     timeout_ms = 10000,
@@ -63,19 +56,34 @@ lsp.format_mapping('gq', {
   servers = {
     ['lua_ls'] = { 'lua' },
     ['rust_analyzer'] = { 'rust' },
-    ['null-ls'] = { 'javascript', 'typescript' },
+    ['null-ls'] = { 'javascript', 'typescript', 'c', 'cpp', 'json', 'yaml' },
   }
 })
 
--- lsp.skip_server_setup({ 'tsserver' })
 
 lsp.setup()
 
+local null_ls = require("null-ls")
+
+null_ls.setup({
+  sources = {
+    null_ls.builtins.diagnostics.eslint_d,
+    null_ls.builtins.formatting.prettierd.with({ filetypes = { "javascript", "typescript" } }),
+    null_ls.builtins.formatting.jq.with({ filetypes = { "json" }}),
+    null_ls.builtins.formatting.clang_format
+  }
+})
+
+require("mason-null-ls").setup({
+  ensure_installed = nil,
+  automatic_installation = true,
+})
+
 lsp.set_sign_icons({
-  error = '✘',
-  warn = '▲',
-  hint = '⚑',
-  info = ''
+  error = ' ',
+  warn  = ' ',
+  hint  = ' ',
+  info  = ' '
 })
 
 vim.diagnostic.config({
@@ -97,12 +105,10 @@ cmp.setup({
   sources = {
     { name = 'nvim_lsp', priority = 900 },
     { name = 'luasnip',  priority = 850, keyword_length = 2, max_item_count = 8 },
+    { name = 'codeium',  priority = 800 },
     { name = 'buffer',   priority = 700, keyword_length = 5, max_item_count = 8 },
     { name = 'nvim_lua', priority = 600 },
     { name = 'path',     priority = 500 },
     { name = 'emoji',    priority = 400 },
-    -- { name = 'cmp_tabnine', priority = 800, max_num_results = 3 },
-    -- { name = 'codeium',  priority = 800 },
-    -- { name = 'npm', priority = 7 },
-  },
+  }
 })

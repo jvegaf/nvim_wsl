@@ -146,8 +146,12 @@ return require('packer').startup {
         -- Snippets
         { 'L3MON4D3/LuaSnip' },
         { 'rafamadriz/friendly-snippets' },
+
+        { "jose-elias-alvarez/null-ls.nvim" },
+        { "jay-babu/mason-null-ls.nvim" }
       }
     }
+
 
     use {
       "nvim-lualine/lualine.nvim",
