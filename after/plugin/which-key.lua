@@ -235,6 +235,13 @@ local mappings = {
     p = { '<cmd>TSPlaygroundToggle<cr>', 'Playground' },
     r = { '<cmd>TSToggle rainbow<cr>', 'Rainbow' },
   },
+  x = {
+    name = 'Diagnostics',
+    d = { '<cmd>lua vim.diagnostic.open_float()<cr>', 'Diagnostics' },
+    x = { '<cmd>TroubleToggle<cr>', 'TroubleToggle' },
+    q = { '<cmd>TroubleToggle quickfix<cr>', 'Quickfix' },
+    c = { '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Code Action' },
+  },
   z = {
     name = 'Tasks',
     z = { '<cmd>Telescope tasks<cr>', 'Tasks' },
