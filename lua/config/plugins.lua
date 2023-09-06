@@ -133,14 +133,6 @@ return require('packer').startup {
         { 'saadparwaiz1/cmp_luasnip' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'hrsh7th/cmp-nvim-lua' },
-        {
-          "jcdickinson/codeium.nvim",
-          requires = {
-            "nvim-lua/plenary.nvim",
-          },
-        },
-
-
 
         -- Snippets
         { 'L3MON4D3/LuaSnip' },
@@ -149,6 +141,17 @@ return require('packer').startup {
         { "jose-elias-alvarez/null-ls.nvim" },
         { "jay-babu/mason-null-ls.nvim" }
       }
+    }
+
+    use {
+      'Exafunction/codeium.vim',
+      config = function()
+        -- Change '<C-g>' here to any keycode you like.
+        vim.keymap.set('i', '<A-l>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+        vim.keymap.set('i', '<A-j>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+        vim.keymap.set('i', '<A-k>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+        vim.keymap.set('i', '<A-h>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+      end
     }
 
 
@@ -195,9 +198,10 @@ return require('packer').startup {
     use('stevearc/dressing.nvim')
 
     use {
-      'jvegaf/browse.nvim',
+      'lalitmee/browse.nvim',
       requires = {
         'nvim-telescope/telescope.nvim',
+        'stevearc/dressing.nvim',
       },
     }
 

@@ -1,8 +1,6 @@
 local status, lsp = pcall(require, "lsp-zero")
 if not status then return end
 
-require("codeium").setup()
-
 lsp.preset({})
 
 lsp.ensure_installed({
@@ -52,17 +50,6 @@ end
 
 lsp.on_attach(on_attach)
 
--- local cmp_nvim_lsp = require "cmp_nvim_lsp"
---
--- require('lspconfig').clangd.setup({
---   on_attach = on_attach,
---   capabilities = cmp_nvim_lsp.default_capabilities(),
---   cmd = {
---     "clangd",
---     "--offset-encoding=utf-16",
---   },
--- })
-
 lsp.format_mapping('gf', {
   format_opts = {
     async = false,
@@ -84,7 +71,7 @@ null_ls.setup({
   sources = {
     null_ls.builtins.diagnostics.eslint_d,
     null_ls.builtins.formatting.prettierd.with({ filetypes = { "javascript", "typescript" } }),
-    null_ls.builtins.formatting.jq.with({ filetypes = { "json" } }),
+    null_ls.builtins.formatting.fixjson.with({ filetypes = { "json" } }),
     null_ls.builtins.formatting.clang_format
   }
 })
@@ -121,7 +108,6 @@ cmp.setup({
   sources = {
     { name = 'nvim_lsp', priority = 900 },
     { name = 'luasnip',  priority = 850, keyword_length = 2, max_item_count = 8 },
-    { name = 'codeium',  priority = 800 },
     { name = 'buffer',   priority = 700, keyword_length = 5, max_item_count = 8 },
     { name = 'nvim_lua', priority = 600 },
     { name = 'path',     priority = 500 },

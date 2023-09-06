@@ -47,8 +47,6 @@ map('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 -- Move Lines
 map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
 map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
--- map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
--- map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
 map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
@@ -71,12 +69,6 @@ map('n', '<F8>', '<cmd>TSPlaygroundToggle<cr>', opts)
 -- map('n', '<C-t>', '<cmd>lua vim.lsp.buf.document_symbol()<cr>', opts)
 
 
--- vim.keymap.set(
---   "n",
---   "<tab>",
---   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>",
---   opts
--- )
 
 -- Tabs
 map('n', '<Tab>', '<cmd>BufferLineCycleNext<CR>', opts)
@@ -85,6 +77,7 @@ map('n', '<A-q>', '<cmd>bdelete<CR>', opts)
 map('n', '<leader>w', '<cmd>write<CR>', opts)
 map('n', '<leader>q', '<cmd>quit<CR>', opts)
 map('i', 'jj', '<Esc>', opts)
+map('i', 'kk', '<Esc>', opts)
 
 -- Easyalign
 map('n', 'ga', '<Plug>(EasyAlign)', opts)
